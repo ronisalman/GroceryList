@@ -1,37 +1,31 @@
 /** Created by Roni Salman **/
 
-html, body {
+/** Background image from https://unsplash.com/photos/D6Tu_L3chLE **/
 
-	height: 100%;
+body {
+	margin: 0;
+	min-width: 300px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+ul {
 	margin: 0;
 	padding: 0;
-
 }
 
-#background {
+ul li {
+	position: relative;
+	background-color: tan;
+	list-style-type: none;
+	cursor: pointer;
+	padding: 10px 6px 10px 30px;
+	transition: 0.5s;
 
-	/** Image from https://unsplash.com/photos/D6Tu_L3chLE **/
-
-	background-image: url("background.jpg");
-	background-size: cover;
-
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-
-	height: 100%;
-
-	filter: blur(5px);
-
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
-
-#doc {
-	position: fixed;
-	top: 20%;
-	left: 50%;
-
-	transform: translate(-50%, -50%);
-
-	color: white;
-}
-

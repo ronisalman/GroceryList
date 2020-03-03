@@ -29,3 +29,31 @@ ul li {
 	-ms-user-select: none;
 	user-select: none;
 }
+
+ul li.checked::before {
+	content: "";
+	position: absolute;
+	border-color: white;
+	border-style: solid;
+	border-width: 0 2px 2px 0;
+	top: 10px;
+	left: 15px;
+	transform: rotate(45deg);
+	height: 15px;
+	width: 10px;
+}
+
+ul li:hover {
+	background-color: blue;
+}
+
+.close {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 10px 15px 10px 15px;
+}
+
+.close:hover{
+	background: green;
+}

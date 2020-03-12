@@ -1,7 +1,6 @@
 // Created by Roni Salman
 
 const ul=document.querySelector("ul");
-const li=document.querySelectorAll("li");
 
 
 function init(){
@@ -12,6 +11,7 @@ function init(){
 //creating the delete button with delete ability 
 
 function createDelete(){
+	let li=document.querySelectorAll("li");
 	for(let i=0;i<li.length;i++){
 		let btn=document.createElement("button");
 		btn.innerHTML="Delete";
@@ -20,7 +20,10 @@ function createDelete(){
 			btn.parentElement.style.display="none";
 		});
 
-		li[i].appendChild(btn);
+		//only add delete if there is no delete button already
+		if(li[i].childNodes.length<=1){
+			li[i].appendChild(btn);
+		}
 	}
 }
 
@@ -33,9 +36,12 @@ function addItem(){
 	const newItem=document.createElement("li");
 	newItem.innerHTML=input;
 
-	ul.appendChild(newItem);
+	//add to list if not empty
+	if(newItem.innerHTML!=""){
+		ul.appendChild(newItem);
+	}
 
-	
+	createDelete();
 }
 
 

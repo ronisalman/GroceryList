@@ -25,10 +25,40 @@ html,body{
 }
 
 ul{
+	padding-left: 0px;
 	color: white;
-	top: 150px;
+	top: 250px;
+	height: 250px;
+	max-height: 250px;
+	overflow-y: scroll;
 	left: 50%;
-	transform: translate(-75%,-50%);
+	transform: translate(-50%,-50%);
 	position: absolute;	
 	list-style-type: none;
+}
+
+ul::-webkit-scrollbar{
+	display: none;
+}
+
+ul li{
+	width: 300px;
+	padding-top: 10px;
+}
+
+ul li:hover{
+	color: red;
+	cursor: pointer;
+}
+
+ul li button{
+	position: absolute;
+	left: 80%;
+	border: none;
+	background-color: red;
+	color: white;
+}
+
+ul li button:hover{
+	cursor: pointer;
 }

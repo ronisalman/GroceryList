@@ -41,6 +41,9 @@ function addItem(){
 		ul.appendChild(newItem);
 	}
 
+	document.querySelector("input").value="";
+	
+
 	createDelete();
 }
 

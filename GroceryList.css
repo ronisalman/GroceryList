@@ -69,3 +69,8 @@ ul li button{
 ul li button:hover{
 	cursor: pointer;
 }
+
+.crossOff{
+	text-decoration: line-through;
+	color: green;
+}

@@ -5,6 +5,7 @@ const ul=document.querySelector("ul");
 
 function init(){
 	createDelete();
+	crossOff();
 	addItem();
 }
 
@@ -28,6 +29,21 @@ function createDelete(){
 }
 
 
+//allowing to cross off completed items
+
+function crossOff(){
+	let li=document.querySelectorAll("li");
+
+	for(let i=0;i<li.length;i++){
+		li[i].addEventListener("click",function(){
+			li[i].classList.toggle("crossOff");
+			console.log("hi");
+		});
+	}
+}
+
+
+
 // Create a new list item when clicking on the "Add" button
 
 function addItem(){
@@ -45,7 +61,9 @@ function addItem(){
 	
 
 	createDelete();
+	crossOff();
 }
+
 
 
 init();

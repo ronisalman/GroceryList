@@ -36,7 +36,7 @@ function crossOff(){
 
 	for(let i=0;i<li.length;i++){
 		li[i].addEventListener("click",function(){
-			li[i].classList.toggle("crossOff");
+			li[i].classList.add("crossOff");
 			console.log("hi");
 		});
 	}

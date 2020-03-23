@@ -74,3 +74,7 @@ ul li button:hover{
 	text-decoration: line-through;
 	color: green;
 }
+
+.complete{
+	color: green;
+}

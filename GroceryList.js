@@ -1,6 +1,7 @@
 // Created by Roni Salman
 
 const ul=document.querySelector("ul");
+let obj ={};
 
 
 function init(){
@@ -12,7 +13,7 @@ function init(){
 //creating the delete button with delete ability 
 
 function createDelete(){
-	let li=document.querySelectorAll("li");
+	const li=document.querySelectorAll("li");
 	for(let i=0;i<li.length;i++){
 		let btn=document.createElement("button");
 		btn.innerHTML="Delete";
@@ -32,13 +33,15 @@ function createDelete(){
 //allowing to cross off completed items
 
 function crossOff(){
-	let li=document.querySelectorAll("li");
-
+	const li=document.querySelectorAll("li");
+	console.log(obj);
 	for(let i=0;i<li.length;i++){
-		li[i].addEventListener("click",function(){
-			li[i].classList.add("crossOff");
-			console.log("hi");
-		});
+		if(obj[i]!=="complete"){
+			li[i].addEventListener("click",function(){
+				li[i].classList.toggle("crossOff");
+				obj[i]="complete";
+			});	
+		}
 	}
 }
 

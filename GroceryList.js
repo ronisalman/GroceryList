@@ -1,8 +1,6 @@
 // Created by Roni Salman
 
 const ul=document.querySelector("ul");
-let obj ={};
-
 
 function init(){
 	createDelete();
@@ -17,6 +15,7 @@ function createDelete(){
 	for(let i=0;i<li.length;i++){
 		let btn=document.createElement("button");
 		btn.innerHTML="Delete";
+		
 		//removing the item clicked
 		btn.addEventListener("click",function(){
 			btn.parentElement.style.display="none";
@@ -34,12 +33,11 @@ function createDelete(){
 
 function crossOff(){
 	const li=document.querySelectorAll("li");
-	console.log(obj);
+
 	for(let i=0;i<li.length;i++){
-		if(obj[i]!=="complete"){
+		if(!li[i].classList.contains("crossOff")){
 			li[i].addEventListener("click",function(){
-				li[i].classList.toggle("crossOff");
-				obj[i]="complete";
+				li[i].classList.add("crossOff");
 			});	
 		}
 	}
@@ -47,7 +45,7 @@ function crossOff(){
 
 
 
-// Create a new list item when clicking on the "Add" button
+//adding a new item to list
 
 function addItem(){
 	let input=document.querySelector("input").value;
